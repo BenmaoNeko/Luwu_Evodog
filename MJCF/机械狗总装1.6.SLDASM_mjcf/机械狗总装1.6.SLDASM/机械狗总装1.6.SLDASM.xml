@@ -1,0 +1,125 @@
+<mujoco model="机械狗总装1.6.SLDASM">
+  <compiler angle="radian" meshdir="meshes/" inertiafromgeom="auto" inertiagrouprange="3 3" />
+  <asset>
+    <mesh name="base_link" file="base_link.STL" />
+    <mesh name="r1" file="r1.STL" />
+    <mesh name="r1_2" file="r1_2.STL" />
+    <mesh name="r1_3" file="r1_3.STL" />
+    <mesh name="r2" file="r2.STL" />
+    <mesh name="r2_2" file="r2_2.STL" />
+    <mesh name="r2_3" file="r2_3.STL" />
+    <mesh name="L1" file="L1.STL" />
+    <mesh name="L1_2" file="L1_2.STL" />
+    <mesh name="L1_3" file="L1_3.STL" />
+    <mesh name="L2" file="L2.STL" />
+    <mesh name="L2_2" file="L2_2.STL" />
+    <mesh name="L2_3" file="L2_3.STL" />
+    <material name="base_link_mat" rgba="0.584313725490196 0.768627450980392 1 1" specular="0" />
+    <material name="r1_mat" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" specular="0" />
+    <material name="r1_2_mat" rgba="1 1 0 1" specular="0" />
+    <material name="r1_3_mat" rgba="1 1 0 1" specular="0" />
+    <material name="r2_mat" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" specular="0" />
+    <material name="r2_2_mat" rgba="1 1 0 1" specular="0" />
+    <material name="r2_3_mat" rgba="1 1 0 1" specular="0" />
+    <material name="L1_mat" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" specular="0" />
+    <material name="L1_2_mat" rgba="1 1 0 1" specular="0" />
+    <material name="L1_3_mat" rgba="1 1 0 1" specular="0" />
+    <material name="L2_mat" rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" specular="0" />
+    <material name="L2_2_mat" rgba="1 1 0 1" specular="0" />
+    <material name="L2_3_mat" rgba="1 1 0 1" specular="0" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+      <inertial pos="0.000426331461606816 -7.65789738864816e-14 0.00348568517176644" mass="0.0736065853016137" fullinertia="0.0000105163173959021 0.0000340148760854227 0.0000420440768490398 -4.07210127141347e-20 -7.18560853955125e-8 1.70312092902732e-20"/>
+      <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="base_link_mat" type="mesh" mesh="base_link" />
+      <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="base_link" />
+      <body name="r1" pos="0.0706 -0.0250000000000973 -0.011" quat="1.1423625238904153e-15 0.7071067811865464 1.1423625238904192e-15 -0.7071067811865488">
+        <joint name="joint1" type="hinge" axis="0 0 -1" limited="true" range="-1.2 0.8" damping="0" frictionloss="0"/>
+        <inertial pos="0.0104542997851242 0.0114169386449827 0.0175712316404586" mass="0.0395889323107115" fullinertia="0.0000039387034237255 0.00000365539831955259 0.00000417381648006797 3.52294208051059e-7 -9.85700017063233e-9 6.46838545291874e-9"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r1_mat" type="mesh" mesh="r1" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r1" />
+        <body name="r1_2" pos="0.02 0.02925 0.0251" quat="0.49999999999999833 0.5000000000000001 0.5000000000000001 -0.5000000000000018">
+          <joint name="joint2" type="hinge" axis="0 0 1" limited="true" range="-2 0.5" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0311165748129232 -4.53498252075968e-7 0.0161307561251822" mass="0.0207690579525675" fullinertia="8.47086535446219e-7 0.00000213552716194071 0.00000259596023159635 1.38794208170701e-10 8.07574035270518e-10 -2.89643018316188e-11"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r1_2_mat" type="mesh" mesh="r1_2" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r1_2" />
+          <body name="r1_3" pos="-0.044 0 0.000249999999999993">
+            <joint name="joint3" type="hinge" axis="0 0 1" limited="true" range="0 3.5" damping="0" frictionloss="0"/>
+            <inertial pos="0.0242174330369214 0.0175837518779588 0.0159999870115391" mass="0.0241728708195331" fullinertia="0.00000308855421783559 0.0000207416567704196 0.000019499246625698 -0.00000112048979974792 -7.7851136679491e-12 -1.80634942022932e-12"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r1_3_mat" type="mesh" mesh="r1_3" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r1_3" />
+          </body>
+        </body>
+      </body>
+      <body name="r2" pos="-0.0354 -0.0250000000000973 -0.011" quat="1.1423625238904153e-15 0.7071067811865464 1.1423625238904192e-15 -0.7071067811865488">
+        <joint name="joint4" type="hinge" axis="0 0 -1" limited="true" range="-1.3 0.8" damping="0" frictionloss="0"/>
+        <inertial pos="0.0104542997851242 0.0114169386449827 0.0175712316404586" mass="0.0395889323107115" fullinertia="0.0000039387034237255 0.00000365539831955259 0.00000417381648006797 3.52294208051059e-7 -9.85700017063234e-9 6.46838545291889e-9"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r2_mat" type="mesh" mesh="r2" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r2" />
+        <body name="r2_2" pos="0.02 0.02925 0.0251" quat="0.49999999999999833 0.5000000000000001 0.5000000000000001 -0.5000000000000018">
+          <joint name="joint5" type="hinge" axis="0 0 1" limited="true" range="-2 0.5" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0311165748129233 -4.53498252082907e-7 0.0161307561251822" mass="0.0207690579525675" fullinertia="8.47086535446219e-7 0.00000213552716194071 0.00000259596023159635 1.38794208170669e-10 8.07574035270483e-10 -2.89643018315677e-11"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r2_2_mat" type="mesh" mesh="r2_2" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r2_2" />
+          <body name="r2_3" pos="-0.044 0 0.00025">
+            <joint name="joint6" type="hinge" axis="0 0 1" limited="true" range="0 3.5" damping="0" frictionloss="0"/>
+            <inertial pos="0.0242174330369214 0.0175837518779588 0.0159999870115391" mass="0.0241728708195331" fullinertia="0.00000308855421783559 0.0000207416567704196 0.000019499246625698 -0.00000112048979974793 -7.78511366162432e-12 -1.80634941973047e-12"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="r2_3_mat" type="mesh" mesh="r2_3" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="r2_3" />
+          </body>
+        </body>
+      </body>
+      <body name="L1" pos="0.0706 0.0249999999999027 -0.011" quat="1.1423625238904153e-15 0.7071067811865464 1.1423625238904192e-15 -0.7071067811865488">
+        <joint name="joint7" type="hinge" axis="0 0 -1" limited="true" range="-0.8 1.2" damping="0" frictionloss="0"/>
+        <inertial pos="0.0104564861054878 -0.0114165840737872 0.0176977615461028" mass="0.0395942630203327" fullinertia="0.00000393991542077095 0.00000365652292326213 0.00000417588686826556 -3.52375855221468e-7 -9.97399626124024e-9 -5.11464057764049e-9"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L1_mat" type="mesh" mesh="L1" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L1" />
+        <body name="L1_2" pos="0.02 -0.02925 0.0251" quat="0.49999999999999833 0.5000000000000001 0.5000000000000001 -0.5000000000000018">
+          <joint name="joint8" type="hinge" axis="0 0 -1" limited="true" range="-0.5 2" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0311165748129232 4.53498252075968e-7 -0.0161307561251823" mass="0.0207690579525675" fullinertia="8.47086535446218e-7 0.0000021355271619407 0.00000259596023159634 -1.38794208170295e-10 -8.07574035270431e-10 -2.8964301831641e-11"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L1_2_mat" type="mesh" mesh="L1_2" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L1_2" />
+          <body name="L1_3" pos="-0.044 0 -0.000249999999999993" quat="1.6155445744325867e-15 1 0 0">
+            <joint name="joint9" type="hinge" axis="0 0 -1" limited="true" range="0 3.5" damping="0" frictionloss="0"/>
+            <inertial pos="0.0242174330369214 -0.0175837518779589 0.0160000129884609" mass="0.0241728708195331" fullinertia="0.00000308855421783559 0.0000207416567704196 0.000019499246625698 0.00000112048979974796 7.78511366296278e-12 -1.80634941893746e-12"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L1_3_mat" type="mesh" mesh="L1_3" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L1_3" />
+          </body>
+        </body>
+      </body>
+      <body name="L2" pos="-0.0354 0.0249999999999027 -0.011" quat="1.1423625238904153e-15 0.7071067811865464 1.1423625238904192e-15 -0.7071067811865488">
+        <joint name="joint10" type="hinge" axis="0 0 -1" limited="true" range="-0.8 1.3" damping="0" frictionloss="0"/>
+        <inertial pos="0.0104564861054878 -0.0114165840737872 0.0176977615461029" mass="0.0395942630203327" fullinertia="0.00000393991542077096 0.00000365652292326214 0.00000417588686826556 -3.52375855221468e-7 -9.97399626124056e-9 -5.11464057764106e-9"/>
+        <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L2_mat" type="mesh" mesh="L2" />
+        <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L2" />
+        <body name="L2_2" pos="0.02 -0.02925 0.0251" quat="0.49999999999999833 0.5000000000000001 0.5000000000000001 -0.5000000000000018">
+          <joint name="joint11" type="hinge" axis="0 0 -1" limited="true" range="-0.5 2" damping="0" frictionloss="0"/>
+          <inertial pos="-0.0311165748129233 4.53498252079437e-7 -0.0161307561251822" mass="0.0207690579525675" fullinertia="8.47086535446218e-7 0.00000213552716194071 0.00000259596023159634 -1.38794208170271e-10 -8.07574035270366e-10 -2.89643018315851e-11"/>
+          <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L2_2_mat" type="mesh" mesh="L2_2" />
+          <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L2_2" />
+          <body name="L2_3" pos="-0.044 0 -0.000249999999999986" quat="1.6155445744325867e-15 1 0 0">
+            <joint name="joint12" type="hinge" axis="0 0 -1" limited="true" range="0 3.5" damping="0" frictionloss="0"/>
+            <inertial pos="0.0242174330369214 -0.0175837518779589 0.0160000129884609" mass="0.0241728708195331" fullinertia="0.00000308855421783558 0.0000207416567704196 0.000019499246625698 0.00000112048979974795 7.78511367568444e-12 -1.80634942258767e-12"/>
+            <geom pos="0 0 0" group="1" contype="0" conaffinity="0" mass="0" material="L2_3_mat" type="mesh" mesh="L2_3" />
+            <geom pos="0 0 0" rgba="0.9372549019607843 0.26666666666666666 0.26666666666666666 1" group="3" contype="1" conaffinity="1" type="mesh" mesh="L2_3" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="joint1_servo" joint="joint1" kp="100" />
+    <position name="joint2_servo" joint="joint2" kp="100" />
+    <position name="joint3_servo" joint="joint3" kp="100" />
+    <position name="joint4_servo" joint="joint4" kp="100" />
+    <position name="joint5_servo" joint="joint5" kp="100" />
+    <position name="joint6_servo" joint="joint6" kp="100" />
+    <position name="joint7_servo" joint="joint7" kp="100" />
+    <position name="joint8_servo" joint="joint8" kp="100" />
+    <position name="joint9_servo" joint="joint9" kp="100" />
+    <position name="joint10_servo" joint="joint10" kp="100" />
+    <position name="joint11_servo" joint="joint11" kp="100" />
+    <position name="joint12_servo" joint="joint12" kp="100" />
+  </actuator>
+</mujoco>

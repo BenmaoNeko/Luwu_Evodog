@@ -1,0 +1,57 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.python-version
+# uv.lock
+
+
+
+# Virtual environments
+.venv
+
+# Logs and databases
+wandb
+logs
+agents
+AGENTS.md
+CLAUDE.md
+
+*.pch
+nohup.out
+*.onnx
+beyondmimic_motions/
+artifacts/
+*.npz
+
+src/mjlab_microduck/robot/microduck.bak/*
+src/mjlab_microduck/robot/microduck_test/*
+data/
+*.pt
+
+claude_experiments/
+
+backup_onnx/
+
+
+logdir/.claude/
+logdir/
+logdir/.claude/worktrees/
+
+# Local handoff exclusions.
+/docs/
+/logs/
+/luwu_mjlab-main/
+*.zip
+*.rar
+*.7z
+*.tar
+*.log
+*.jsonl
+.pytest_cache/
+.ruff_cache/
+.omx/
+.codex/
